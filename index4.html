@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with Search & Logo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header class="bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div></div> <!-- Placeholder for alignment -->
+            <form class="d-inline-block" action="/search" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="query">
+                    <button class="btn btn-outline-secondary" type="submit">Go</button>
+                </div>
+            </form>
+            <img src="path_to_your_logo.png" alt="Logo" style="height: 50px;"> <!-- Adjust path_to_your_logo.png to your actual logo path -->
+        </div>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2l030" crossorigin="anonymous"></script>
+</body>
+
+</html>

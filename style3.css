@@ -1,3 +1,5 @@
+
+
 body {
     margin: 0;
     padding: 0;
@@ -58,28 +60,11 @@ body {
 .active {
     left: 0;
 }
-
-
-
-.footer {
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
     font-family: Arial, sans-serif;
 }
 
-.contact-info, .rights {
-    margin: 0 20px;
+header{
+    height: 4em;
 }
 
-p {
-    margin: 0;
-    padding: 0;
-}
-
-.about_us{
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    margin: 100px;
-}
