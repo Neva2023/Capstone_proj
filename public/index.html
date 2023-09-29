@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Project</title>
+    <script src="usersDetails.js"></script>
+   
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+        integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div x-data="whichSlope">
+
+        <div class="logo">
+            <img src="images/which_slope.jpg" alt="Logo" width="250">
+            <h1>Log in to “Which Slope”</h1>
+        </div>
+        <div class="login-container">
+            <div class="google-container">
+                <button class="google-button">Continue with Google
+                </button>
+                <p class="or">or</p>
+            </div>
+            <input x-model="email" type="email" class="input-field" placeholder="Email" required>
+            <input  x-model="password_hash" type="password" class="input-field" placeholder="Password" required>
+            <button class="login-button"  @click="login()" >Login</button>
+            <br><br>
+            <span>No account?<a href="index101.html" class="create-account-button">Create one</a></span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

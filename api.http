@@ -1,0 +1,51 @@
+GET http://localhost:4011/api/details
+
+
+###
+post http://localhost:4011/api/details/create
+content-type: application/json
+
+{
+    "email": "youadcxas@me.com",
+    "first_name": "Neddvsa",
+    "last_name": "sufgdK",
+    "occupation": "Soujtadsware Engineer",
+    "password_hash": "d1h2hg3"
+}
+
+###
+post http://localhost:4011/api/details/deleteUser
+content-type: application/json
+
+{
+
+    "email": "mahamochristopher25@gmail.com"
+}
+
+###
+POST http://localhost:4011/api/details/updateUser
+content-type: application/json
+
+{
+    "email": "youaxas@me.com",
+    "first_name": "Nevaasfha",
+    "last_name": "sfadahfK",
+    "occupation": "Softsfhfware Engineer",
+    "password_hash": "12fhf3"
+   
+}
+
+###
+POST http://localhost:4011/api/details/login
+content-type: application/json
+
+{
+                                                         
+    "email": "user@example.com",
+    "password_hash": "1234"
+
+}
+
+
+
+

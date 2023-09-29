@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="usersDetails.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+        integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+
+        
+        <link rel="stylesheet" href="styles101.css">
+      
+
+
+</head>
+
+
+
+<body >
+    <div x-data="whichSlope">
+
+        <form>
+
+            <h1>Create an Account</h1>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" x-model="email" required><br><br>
+
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" x-model="first_name" required><br><br>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" x-model="last_name" required><br><br>
+
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation" x-model="occupation" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" x-model="password_hash" required><br><br>
+
+            <button class="submit-button" @click="addUser()">Register</button>
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>
