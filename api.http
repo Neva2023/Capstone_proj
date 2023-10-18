@@ -10,7 +10,9 @@ content-type: application/json
     "first_name": "Neddvsa",
     "last_name": "sufgdK",
     "occupation": "Soujtadsware Engineer",
-    "password_hash": "d1h2hg3"
+    "numbers": 454,
+    "addresss":"Westdene johannesburg Gauteng",
+    "password_hash" : "d1h2hg3"
 }
 
 ###
@@ -19,7 +21,7 @@ content-type: application/json
 
 {
 
-    "email": "mahamochristopher25@gmail.com"
+    "email": "youadcxas@me.com"
 }
 
 ###
@@ -42,9 +44,34 @@ content-type: application/json
 {
                                                          
     "email": "user@example.com",
-    "password_hash": "1234"
+    "password_hash": "123"
 
 }
+
+###
+POST http://localhost:4011/api/details/aim
+content-type: application/json
+
+{
+                                                         
+    "brief": "I want to do a shallow foundation slope analysis ",
+    "first_name": "Johny"
+
+}
+
+
+###
+
+POST http://localhost:4011/api/details/UserComments 
+content-type: application/json
+
+{
+                                                         
+    "comment": "I want to do a shallow foundation slope analysis analysis ",
+    "first_name": "Johnny"
+
+}
+
 
 
 

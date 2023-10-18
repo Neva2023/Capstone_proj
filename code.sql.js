@@ -16,9 +16,9 @@ export async function getDetails () {
 
 }
 
-export async function create(email, first_name, last_name, occupation, password_hash) {
-    const sql = `insert into users (email, first_name,last_name,occupation, password_hash) values(?,?,?,?,?);`
-       return await db.run(sql, [email,first_name,last_name,occupation,password_hash])
+export async function create(email, first_name, last_name, occupation,numbers,addresss, password_hash) {
+    const sql = `insert into users (email, first_name,last_name,occupation,numbers,addresss, password_hash) values(?,?,?,?,?,?,?);`
+       return await db.run(sql, [email,first_name,last_name,occupation,numbers,addresss,password_hash])
     }
 
 
@@ -27,13 +27,33 @@ export async function deleteUser(email) {
     return await db.run(sql, email)
 }
 
-export async function updateUser(email, first_name, last_name, occupation, password_hash){
-    const sql= `update users set first_name = ?, last_name= ?, occupation = ?,password_hash = ? where email = ?`
-    return await db.run(sql, [email, first_name,last_name,occupation,password_hash])
+export async function updateUser(email, first_name, last_name, occupation,numbers,addresss, password_hash){
+    const sql= `update users set first_name = ?, last_name= ?, occupation = ?,numbers= ?, addresss= ? ,password_hash = ? where email = ?`
+    return await db.run(sql, [email, first_name,last_name,occupation,numbers,addresss,password_hash])
 }
 
 export async function login(email) {
-    const query = `SELECT email, password_hash FROM users WHERE email = ?`;
+    const query = `SELECT * FROM users WHERE email = ?`;
     return await db.all(query,email)
 
   }
+
+  export async function aim(brief,first_name) {
+    const sql = `insert into aim (brief,first_name) values(?,?)`;
+    return await db.run(sql,[brief,first_name])
+
+  }
+  
+
+  export async function UserComments(comment,first_name) {
+    const sql = `insert into comments (comment,first_name) values(?,?)`;
+    return await db.run(sql,[comment,first_name])
+
+}
+
+
+export async function images(picture_data){
+
+    const sql = `insert into users(picture_data) value(?)`
+    return await db.run(sql,picture_data)
+}

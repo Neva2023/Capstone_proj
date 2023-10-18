@@ -58,29 +58,15 @@ body {
 .active {
     left: 0;
 }
-
-
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center-align text within the footer */
-    height: auto; /* Make the footer take up the entire viewport height */
-  }
-
-.contact-info, .rights {
-    text-align: center;
-}
-
-p {
-    margin: 0;
-    padding: 0;
-}
-
-.about_us{
-    padding: 20px;
+body {
     font-family: Arial, sans-serif;
-    margin: 100px;
+}
+
+header{
+    height: 4em;
+}
+
+.input {
+    margin-left: 10em;
+    margin-right:20em;
 }

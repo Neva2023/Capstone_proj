@@ -13,7 +13,7 @@
 <body>
     <header class="bg-light py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <div></div> <!-- Placeholder for alignment -->
+        
             <form class="d-inline-block" action="/search" method="GET">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search" name="query">
@@ -40,6 +40,7 @@
             <li><a href="slope-analysis.html">Slope Analysis</a></li>
             <li><a href="results.html">Results</a></li>
             <li><a href="explore.html">Get Connected</a></li>
+            <li><a href="final.html">final</a></li>
           
         </ul>
 
@@ -49,8 +50,8 @@
         <div class="container">
             <div class="row">
                <div class="col-md-5" >
-                <img src="profile_pic.jpg" alt="Logo" width="150">
-                
+                <!-- <img src="profile_pic.jpg" alt="Logo" width="150">
+                 -->
                 </div>
         
                 <div class="col-md-6">
@@ -61,17 +62,21 @@
                 
         
             </div>
+
+            <div x-data="whichSlope" >
             <p>&nbsp</p>
             <div class="text_box" style="text-align: center;">
                 <h5><p>PLEASE GIVE US A BRIEF OVERVIEW OF WHAT YOU WOULD LIKE TO DO</p></h5>
-                <textarea cols="100" rows="5" ></textarea>
-            
+                <textarea cols="100" rows="5" x-model="brief"></textarea>
+                <button  @click="aim()">Post now</button>
                 <p>WOULD YOU LIKE TO CONTINUE TO THE SLOPE ANALYSIS?</p>
-                <button>Yes</button>
-               <button href="home-page.html">No</button>
+                <button onclick="window.location.href='http://localhost:5000'">Yes</button>
 
-
+                <button onclick=" window.location.href = './home-page.html';">No</button>
                
+
+
+            </div>
             </div>
             
 
