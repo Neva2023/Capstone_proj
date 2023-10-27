@@ -4,9 +4,12 @@ import numpy as np
 
 app = Flask(__name__)
 
+
 # Load the saved model
-with open('decision_tree_model.pkl', 'rb') as model_file:
-    model = pickle.load(model_file)
+
+from joblib import load
+model = load('filename.joblib') 
+
 
 @app.route("/")
 def Home():
@@ -50,5 +53,7 @@ def predict():
         return jsonify({'error': str(e)})
 
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+    
+    

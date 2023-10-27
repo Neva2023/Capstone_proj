@@ -17,6 +17,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
     integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    // Retrieve data
+    let data = localStorage.getItem('theemail');
+    console.log(data);  // Outputs: SomeValue
+
+  </script>
 </head>
 
 <body x-data="whichSlope">
@@ -29,7 +35,7 @@
     <p>&nbsp</p>
     <ul class="menu">
       <li><a href="home-page.html">Home</a></li>
-      <li><a href="profile.html">Profile</a></li>
+      <li><a href="profile.html" onclick="login()" >Profile</a></li>
       <li><a href="slope-analysis.html">Slope Analysis</a></li>
       <li><a href="results.html">Results</a></li>
       <li><a href="explore.html">Get Connected</a></li>
@@ -85,6 +91,7 @@
     </div>
     <div class="copyright">&copy; 2023 All rights reserved.</div>
   </div>
+  <div x-text="email"></div>
 </body>
 
 </html>

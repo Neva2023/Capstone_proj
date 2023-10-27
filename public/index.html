@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capstone Project</title>
     <script src="usersDetails.js"></script>
-   
+
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
         integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   
 
-        <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        // Store data
+        localStorage.setItem('themail', 'email');
+
+    </script>
+    
 </head>
 
 <body x-data="whichSlope">
@@ -35,7 +41,10 @@
             <button class="login-button"  @click="login()" >Login</button>
             <br><br>
             <span>No account?<a href="index101.html" class="create-account-button">Create one</a></span>
+            
         </div>
+        
+        <div x-text="email"></div>
 
     </div>
 

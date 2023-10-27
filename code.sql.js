@@ -57,3 +57,4 @@ export async function images(picture_data){
     const sql = `insert into users(picture_data) value(?)`
     return await db.run(sql,picture_data)
 }
+

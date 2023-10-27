@@ -4,6 +4,7 @@ document.addEventListener("alpine:init", () => {
             version: "api-1.0",
 
             users_data: [],
+            theemail: "",
             email: "",
             first_name: "",
             last_name: "",
@@ -81,21 +82,62 @@ document.addEventListener("alpine:init", () => {
                 });
             },
       
-            
+            inside () {
+        
+                       
+                axios 
+                .get('/api/details')
+                .then((result)=>{
+                    this.users_data = result.data.users_info
+                    console.log(this.users_data)
+                })},
+            // async login() {
+            //     try {
+            //         const response = await axios.post("/api/details/login", {
+            //             email: this.email,
+            //             password_hash: this.password_hash,
+            //         }) 
+            //         this.email = response.data.email;
+            //     this.first_name = response.data.first_name; // Again, reconsider sending and displaying this.
+            //     this.occupation = response.data.occupation;
+            //     this.last_name = response.data.last_name;
+            //         console.log (response.data)
+            //         if (response.data.status === "Log-in-successful") {
+            //             alert("Login successful");
+            //             localStorage.setItem('user',JSON.stringify(
+            //                 {
+            //                     email: this.email,
+            //                     password_hash: this.password_hash,
+            //                 }
+            //             ))
+            //             window.location.href = "./home-page.html";
+            //         } else if (response.data.status === "Login-failed") {
+            //             alert("Login failed. Please check your credentials.");
+            //         }
+            //     } catch (error) {
+            //         console.error("An error occurred:", error);
+            //         // Handle errors here, e.g., display an error message to the user.
+            //     }
+            // },
             async login() {
                 try {
                     const response = await axios.post("/api/details/login", {
                         email: this.email,
                         password_hash: this.password_hash,
-                    }) 
-                    this.email = response.data.email;
-                this.first_name = response.data.first_name; // Again, reconsider sending and displaying this.
-                this.occupation = response.data.occupation;
-                this.last_name = response.data.last_name;
-                    console.log (response.data)
-                    if (response.data.status === "Log-in-successful") {
+                    })
+
+                    const { status, loginResult } = response.data
+                    const user = loginResult[0]
+                    this.email = user["email"];
+                    this.first_name = user["first_name"]; // Again, reconsider sending and displaying this.
+                    this.occupation = user["occupation"];
+                    this.last_name = user["last_name"];
+                    console.log(this.email, this.first_name, this.last_name, this.occupation);
+                  
+                    if (status === "Log-in-successful") {
+                        console.log(user)
                         alert("Login successful");
-                        localStorage.setItem('user',JSON.stringify(
+                        localStorage.setItem('user', JSON.stringify(
                             {
                                 email: this.email,
                                 password_hash: this.password_hash,
@@ -131,6 +173,8 @@ document.addEventListener("alpine:init", () => {
             //             console.error('An error occurred:', error);
             //         });
             // },
+            
+            
 
             addUser() {
                 axios
@@ -161,7 +205,7 @@ document.addEventListener("alpine:init", () => {
                     .then((result) => {
                         if (result.data.status === 'successfully submitted') {
                             // Redirect to a different page
-                            window.location.href = 'http://localhost:5000'; 
+                            window.location.href = 'https://flask-u8oc.onrender.com'; 
                         } else {
                             this.message = alert(result.data.status);
                         }
