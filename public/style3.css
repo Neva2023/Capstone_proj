@@ -75,7 +75,11 @@ header{
     justify-content: center;
     align-items: center;
     text-align: center; /* Center-align text within the footer */
-    height:min-content; /* Make the footer take up the entire viewport height */
+    height: 220px;; /* Make the footer take up the entire viewport height */
+    
+    
+    
+    
   }
 
 .contact-info, .rights {

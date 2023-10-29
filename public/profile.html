@@ -16,24 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
         integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-        <!-- <script>
-            // Assuming the user is signed in and you have their ID stored somewhere, for this example I'll just hard code a user ID
-            const useremail = "example@email.com";
-        
-            fetch(`/user/details?email=${encodeURIComponent(useremail)}`)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('occupation').textContent = data.occupation;
-                    document.getElementById('email').textContent = data.email;
-                    document.getElementById('first_name').textContent = data.first_name;
-                    document.getElementById('last_name').textContent = data.last_name;
-                  
-                })
-                .catch(error => {
-                    console.error('Error fetching user details:', error);
-                });
-        </script> -->
         
     
     <script> </script>
@@ -98,10 +80,10 @@
             <div class="col-md-8">
                 <div>
                     <h1>User Profile</h1>
-                     username: <div x-text="email"></div>
-                     Name:   <p x-text="first_name"></p>
-                     Surname : <p x-text="last_name"></p>
-                    Occupation: <p x-text="occupation"></p>
+                    <p>username: user@example.com</p>
+                    <p>Name: John</p>
+                    <p>Surname : Doe</p>
+                    <p>Occupation: Site Engineer</p>
                 
                     
                 </div>
