@@ -27,24 +27,23 @@
    
 <p>&nbsp</p>
 
-    <div class="sidebar">
-        <div class="hamburger" onclick="toggleSidebar()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <p>&nbsp</p>
-        <ul class="menu">
-            <li><a href="home-page.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="slope-analysis.html">Slope Analysis</a></li>
-            <li><a href="results.html">Results</a></li>
-            <li><a href="explore.html">Get Connected</a></li>
-            <li><a href="final.html">final</a></li>
-          
-        </ul>
-
+<div class="sidebar">
+    <div class="hamburger" onclick="toggleSidebar()">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
     </div>
+    
+    <p>&nbsp</p>
+    <ul class="menu">
+      <li><a href="home-page.html">Home</a></li>
+      <li><a href="profile.html" onclick="login()" >Profile</a></li>
+      <li><a href="slope-analysis.html">Slope Analysis</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="inputs.html">inputs</a></li>
+    
+    </ul>
+  </div>
 
         <div style="text-align: center;"><h2>SLOPE ANALYSIS</h2></div>
         <div class="container">
@@ -71,7 +70,7 @@
                 <button  @click="aim()">Post now</button>
                 <p>WOULD YOU LIKE TO CONTINUE TO THE SLOPE ANALYSIS?</p>
                 <a href="https://flask-u8oc.onrender.com">
-                    <button>Click me</button>
+                    <button>Yes</button>
                   </a>
 
                 <button onclick=" window.location.href = './home-page.html';">No</button>
